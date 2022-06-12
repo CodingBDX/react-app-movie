@@ -31,17 +31,17 @@ function Form()  {
   
 
   <div className='btn-sort-container' class="flex bg-gray-100 p-2 w-full justify-center space-x-0">
-    <button className='btn-sort' id='goodToBad' class="min-w-auto w-32 h-10 bg-red-300 p-2 rounded-l-full hover:bg-red-500  text-white font-semibold  hover:flex-grow transition-all duration-200 ease-in-out">
+    <button className='btn-sort' id='goodToBad' class="min-w-auto w-[40%] h-10 bg-red-300 p-2 rounded-l-full hover:bg-red-500  text-white font-semibold  hover:flex-grow transition-all duration-200 ease-in-out">
     Top  I
     </button>
-    <button className='btn-sort' id='badToGood' class="min-w-auto w-32 h-10 bg-blue-300 p-2 rounded-none hover:bg-blue-500 text-white font-semibold  hover:flex-grow transition-all duration-200 ease-in-out">
+    <button className='btn-sort' id='badToGood' class="min-w-auto w-[40%] h-10 bg-blue-300 p-2 rounded-r-full hover:bg-blue-500 text-white font-semibold  hover:flex-grow transition-all duration-200 ease-in-out">
       Flop
     </button>
   </div>
 
       </div>
 </div>    
-      <div className='result'>
+      <div className='result grid xl:grid-cols-3 gap-1 md:grid-cols-2 sm:grid-cols-1'>
         {moviesData.slice(0, 12).map((movie) => <Card key={movie.id} movie={movie }/>)}
       </div>
     </div>
