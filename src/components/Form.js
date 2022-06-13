@@ -49,17 +49,6 @@ function Form()  {
 <div class="flex flex-row gap-2">
 
 
-  <div class="flex cursor-pointer items-center gap-2 rounded-lg bg-red-500 p-2">
-    <label class="cursor-pointer">
-      <div class="flex h-5 w-9 items-center rounded-full bg-red-300">
-        <input class="peer hidden" type="checkbox" checked />
-        <div
-          class="h-3 w-3 translate-x-1 rounded-full bg-white transition-transform peer-checked:translate-x-5"
-        ></div>
-      </div>
-    </label>
-    <div class="text-white">delete</div>
-  </div>
 
                <label for="checkbox" class="relative flex-inline items-center isolate p-4 rounded-2xl">
         <input id="checkbox" type="checkbox" onChange={() => setSortLanguage("fr-FR")} class="relative peer z-20 text-purple-600 rounded-md focus:ring-0" />
@@ -97,7 +86,8 @@ function Form()  {
             }
 
          
-        }).map((movie) => <Card key={movie.id} movie={movie }/>)}
+          })
+          .map((movie) => <Card key={movie.id} movie={movie} />)}
       </div>
     </div>
   )
